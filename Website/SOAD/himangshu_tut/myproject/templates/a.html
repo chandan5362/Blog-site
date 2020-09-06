@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+{%block content%}
+
+{%for i in event2 %}
+<h3>Name</h3>
+<p class ="abhisarga"> {{i.eventName}}</p>
+<h3>Date</h3>
+<p class ="abhisarga">{{i.eventdate}}</p>
+<h3>Cordinator</h3>
+<p class ="abhisarga">{{i.cordinator}}</p>
+<h3>Venue</h3>
+<p class ="abhisarga">{{i.venue}}</p>
+<h3>Type</h3>
+<p class ="abhisarga">{{i.eventtype }}</p>
+<h3>maximum number of participants</h3>
+<p class ="abhisarga">{{i.max_num_participants}}</p>
+<h3>Rule</h3>
+<p class ="abhisarga">{{i.event_rule }}</p>
+
+<h3>Prize</h3>
+<p class ="abhisarga">{{i.event_prize }}</p>
+{%endfor%}
+
+
+{%endblock content%}

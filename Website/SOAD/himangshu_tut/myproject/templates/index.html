@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+<html>
+<head>
+
+<title>SOAD</title>
+<style>
+	/* p.abhisarga {border-style: groove;}
+div {
+	align-self: : center;
+  background-color: lightgray ;
+  width: 1080px;
+  border: 10 px ;
+  padding: 12px;
+  margin: 0 auto;
+} */
+
+</style>
+</head>
+<body>
+<div>
+
+ 
+<h1>Abhisarga Event Details:-</h1>
+<p>
+  {% if request.user.is_authenticated %}
+	<p>Welcome {{request.user.username}} to the SOAD project | <a href="{% url 'logout' %}">Log Out</a></p>
+
+{% else %}
+    <p><a href="{% url 'register' %}">Sign Up</a></p>
+
+{% endif %}
+
+ </p>
+ 
+ 	{% block content %}
+    {% endblock content %}
+ 
+ 
+ </div>
+
+
+</body>
+</html> 
